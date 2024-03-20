@@ -1,8 +1,8 @@
 console.log("Hello");
 
 function getComputerChoice() {
-  var options = ['rock', 'paper', 'scrissors'];
-  var choice = options[Math.floor(Math.random()*options.length)];
+  let options = ['rock', 'paper', 'scrissors'];
+  let choice = options[Math.floor(Math.random()*options.length)];
   return choice;
 }
 
@@ -32,9 +32,44 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+function invalidChoice(playerSelection) {
+  let options = ['rock', 'paper', 'scrissors'];
+  if(!(options.includes(playerSelection))) {
+    return true;
+  }
+  return false;
+}
 
-console.log("Player selects: " + playerSelection);
-console.log("Computer selects: " + computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function playGame() {
+  let playerScore = 0;
+  let computerScore = 0;
+  for(let i=0; i<5;i++) {
+    let playerSelection = prompt("Choose your weapon");
+    if (invalidChoice(playerSelection)) {
+      playerSelection = prompt("Invalid weapon, choose a valid one:")
+    }
+    const computerSelection = getComputerChoice();
+    console.log("Player selects: " + playerSelection);
+    console.log("Computer selects: " + computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+    if(playRound(playerSelection, computerSelection) === "Player wins") {
+      playerScore++;
+    }
+    if(playRound(playerSelection, computerSelection) === "Player loses") {
+      computerScore++;
+    }
+  }
+  console.log("Players' score: " + playerScore);
+  console.log("Computer' score: " + computerScore);
+  if(playerScore > computerScore) {
+    console.log("The player wins the game!");
+  }
+  else if(playerScore < computerScore) {
+    console.log("The computer wins the game!");
+  } else {
+    console.log("Neither one wins!");
+  }
+
+}
+
+  playGame();
