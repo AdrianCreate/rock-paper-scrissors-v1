@@ -43,7 +43,7 @@ function invalidChoice(playerSelection) {
 function playGame() {
   let playerScore = 0;
   let computerScore = 0;
-  for(let i=0; i<5;i++) {
+ /*  for(let i=0; i<5;i++) {
     let playerSelection = prompt("Choose your weapon");
     if (invalidChoice(playerSelection)) {
       playerSelection = prompt("Invalid weapon, choose a valid one:")
@@ -58,7 +58,7 @@ function playGame() {
     if(playRound(playerSelection, computerSelection) === "Player loses") {
       computerScore++;
     }
-  }
+  } */
   console.log("Players' score: " + playerScore);
   console.log("Computer' score: " + computerScore);
   if(playerScore > computerScore) {

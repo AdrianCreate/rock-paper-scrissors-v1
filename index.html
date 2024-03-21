@@ -5,11 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <header>
+    <h1>ROCK-PAPER-SCRISSORS</h1>
+  </header>
   <section>
-
+    <h2>Choose your weapon:</h2>
+    <h3>First to 5 wins!</h3>
+    <div class="buttonsContainer">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scrissors">Scrissors</button>
+    </div>
+    <div class="labels">
+      <p id="playerLabel">Player score:</p>
+      <p id="computerLabel">Computer score:</p>
+    </div>
+    <div class="scoreboard">
+      <div class ="playerScore"></div>
+      <div class ="computerScore"></div>
+    </div>
+    <div class="resultsLabel">Results</div>
+    <div class="finalScore"></div>
+    <button id="resetBtn">Play Again!</button>
   </section>
 </body>
 </html>
