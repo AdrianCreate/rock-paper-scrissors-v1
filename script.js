@@ -1,4 +1,4 @@
-console.log("Hello");
+ console.log("Hello");
 
 function getComputerChoice() {
   let options = ['rock', 'paper', 'scrissors'];
@@ -73,3 +73,28 @@ function playGame() {
 }
 
   playGame();
+
+  /* const container = document.querySelector("#container");
+  const red = document.createElement("p");
+  red.textContent = "Hey I'm red!";
+  container.appendChild(red);
+  red.style.color = "red";
+  const blue = document.createElement("h3");
+  blue.textContent = "I'm a blue h3!";
+  container.appendChild(blue);
+  blue.style.color = "blue";
+  const three = document.createElement("div");
+  three.setAttribute("style", "border: 1px solid black; background-color: pink");
+  const title = document.createElement("h1");
+  title.textContent = "I'm in a div";
+  three.appendChild(title);
+  const para = document.createElement("p");
+  para.textContent = "ME TOO!";
+  three.appendChild(para);
+  container.appendChild(three);
+
+  const btn = document.querySelector("#btn");
+  btn.addEventListener("click", function (e) {
+    e.target.style.background = "blue";
+  });
+ */
