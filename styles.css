@@ -74,9 +74,21 @@ h3 {
   margin-bottom: 20px;
 }
 
-.resultsContainer {
+.roundResults {
   height: 150px;
   width: 300px;
   border: 5px solid rgb(255, 196, 0);
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+.greenText {
+  color: green;
+}
+
+.redText {
+  color: red;
 }
